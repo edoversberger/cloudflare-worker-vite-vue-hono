@@ -1,0 +1,27 @@
+{
+  "name": "template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --kill-others \"wrangler dev --live-reload\" \"vite dev\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "wrangler deploy --minify"
+  },
+  "dependencies": {
+    "hono": "^4.7.2",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250303.0",
+    "@hono/node-server": "^1.4.1",
+    "@hono/vite-dev-server": "^0.18.1",
+    "@types/node": "^22.13.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "concurrently": "^9.1.2",
+    "vite": "^6.2.0",
+    "wrangler": "^3.111.0",
+		"vite-plugin-vue-devtools": "^7.7.2"
+  }
+}

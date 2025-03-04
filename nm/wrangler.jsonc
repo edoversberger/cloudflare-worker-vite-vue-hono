@@ -1,0 +1,36 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "template",
+	"main": "src/server.js",
+	"compatibility_date": "2025-02-04",
+	"observability": {
+		"enabled": true
+	},
+  "placement": { "mode": "smart" },
+  "env": {
+    "localdev": {
+		"vars": {
+		  "ENV": "localdev"
+		}
+	},
+    "staging": {
+		"vars": {
+		  "ENV": "staging"
+		}
+	},
+    "edge": {
+		"vars": {
+		  "ENV": "edge"
+		}
+	},
+    "production": {
+		"vars": {
+			"ENV": "production"
+		}
+    }
+  },
+  "assets": {
+	"directory": "./public/",
+	"binding": "ASSETS"
+  }
+}
